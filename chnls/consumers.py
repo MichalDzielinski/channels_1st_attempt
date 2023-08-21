@@ -15,9 +15,12 @@ class DashboardConsumer(AsyncWebsocketConsumer):
         message = text_data_json['message']
         sender = text_data_json['sender']
 
+        print(message)
+        print(sender)
+
         print(message, sender)
 
         await self.send(text_data=json.dumps({
-            'message': message,
-            'sender': sender,
+            'message': 'hellow from hier',
+            # 'sender': sender,
         }))

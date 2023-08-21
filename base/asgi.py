@@ -12,8 +12,8 @@ import chnls.routing
 application = ProtocolTypeRouter(
     {
         'http': django_asgi_app,
-        'wegsocket': AllowedHostsOriginValidator(
-            AuthMiddlewareStack(URLRouter(chnls.routing.websocket_url))
+        'websocket': AllowedHostsOriginValidator(
+            AuthMiddlewareStack(URLRouter(chnls.routing.websocket_urlpatterns))
         )
     }
 )
