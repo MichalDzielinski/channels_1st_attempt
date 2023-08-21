@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Statictic, DataItem
 
-# Register your models here.
+admin.site.register(Statictic)
+admin.site.register(DataItem)
