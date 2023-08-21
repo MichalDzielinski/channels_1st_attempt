@@ -4,6 +4,19 @@
 {% endblock scripts %}
 
 {% block content %}
+<form method="POST">    
+{% csrf_token %}
+    <div class="form-group">
+        <input type="text" name="new-statistic" id="" class="form-control">
+        <button type="submit" class="btn btn-primary mt-3">+ add</button>
+    </div>
+
+</form>
+
+
+
+
+
     {% if qs %}
         {% for el in qs %}
             <li><a href="{{el.get_absolute_url}}">
